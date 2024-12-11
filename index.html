@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Quiz for Dhanraj</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffd700;
+            color: #4b0082;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #9370db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #8b008b;
+        }
+        .question {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .final-message {
+            display: none;
+            font-size: 36px;
+            color: #ff1493;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Birthday Quiz for Dhanraj</h1>
+    <div id="question1" class="question active">
+        <p>1. Who is the most dashing Man on Earth?</p>
+        <button onclick="nextQuestion(2)">Autham</button>
+        <button onclick="nextQuestion(2)">Autham Official</button>
+        <button onclick="nextQuestion(2)">Official Autham</button>
+        <button onclick="nextQuestion(2)">Autham Unofficial</button>
+    </div>
+    <div id="question2" class="question">
+        <p>2. What is Dhanraj's favorite phrase?</p>
+        <button onclick="nextQuestion(3)">Leo das sethuttan</button>
+        <button onclick="nextQuestion(3)">vanakkam da mappila</button>
+        <button onclick="nextQuestion(3)">enga thala dhoni</button>
+        <button onclick="nextQuestion(3)">Everything is gonna end</button>
+    </div>
+    <div id="question3" class="question">
+        <p>3. What is your most favorite nickname?</p>
+        <button onclick="nextQuestion(4)">Aranmanai kili Dhanraj</button>
+        <button onclick="nextQuestion(4)">Thesingu Dhanraj</button>
+        <button onclick="nextQuestion(4)">Bayangara beerangi dhanraj</button>
+        <button onclick="nextQuestion(4)">Punnagai Mannan Dhanraj</button>
+    </div>
+    <div id="question4" class="question">
+        <p>4. What is your most valuable possession?</p>
+        <button onclick="nextQuestion(5)">CSK shirt</button>
+        <button onclick="nextQuestion(5)">Winter Santachu Server</button>
+        <button onclick="nextQuestion(5)">Meena Kareena Pushpa</button>
+        <button onclick="nextQuestion(5)">United Pikachu</button>
+    </div>
+    <div id="question5" class="question">
+        <p>5. Which Indian won the oscar recently?</p>
+        <button onclick="showFinalMessage()">Gaana Gobi</button>
+        <button onclick="showFinalMessage()">Gobi Gaana</button>
+        <button onclick="showFinalMessage()">Ngobibibibi</button>
+        <button onclick="showFinalMessage()">Gobi Sir X</button>
+    </div>
+    <div class="final-message" id="finalMessage">
+        <p>HAPPY BIRTHDAY DHANRAJ!</p>
+    </div>
+    <script>
+        function nextQuestion(questionNumber) {
+            document.querySelector('.active').classList.remove('active');
+            document.getElementById('question' + questionNumber).classList.add('active');
+        }
+
+        function showFinalMessage() {
+            document.querySelector('.active').classList.remove('active');
+            document.getElementById('finalMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
